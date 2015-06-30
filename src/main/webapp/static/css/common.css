@@ -1,0 +1,172 @@
+/* common css */
+
+.noLeftPadding {
+    padding-left: 0;
+}
+.noPadding {
+    padding: 0px;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.headerPadding {
+    padding: 10px;
+}
+.fixedHeight {
+    height: 40px;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.showme {
+    display: none;
+}
+.showhim:hover .showme {
+    display : block;
+}
+
+@media (min-width: 992px) {
+    .modal-large-preview {
+        width: 982px; /*1px for border compensation on each side, and fixed width of 980px like on Wix end*/
+    }
+    .modal-large {
+        width: 900px;
+    }
+}
+
+.glyphicon-1x{
+    font-size: 20px;
+}
+
+.glyphicon-2x{
+    font-size: 40px;
+}
+
+.glyphicon-2x-outer {
+    font-size: 42px;
+}
+
+.glyphicon-3x{
+    font-size: 60px;
+}
+
+
+.absoluteMiddle {
+    position: absolute;
+    margin : auto;
+    left: auto;
+    right: auto;
+}
+
+.paintRed {
+    color: red;
+}
+.paintSilver {
+    color: #c0c0c0;
+}
+.paintGreen {
+    color: green;
+}
+.paintTan {
+    color: tan;
+}
+.paintBlack {
+    color: #000000;
+}
+.paintBlue {
+    color: blue;
+}
+.paintDarkBlue {
+    color: darkblue;
+}
+.paintWixBlue {
+    color: #09f;
+}
+.outerMargin {
+    margin-bottom: 20px!important;
+}
+
+.floatLeftInlineAndUnder {
+    float: left;
+    display: inline;
+    white-space : nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.paint-uilib-colors {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 153, 255, .91);
+    color: #fff;
+    /*
+    background-color: #09f;
+    -webkit-box-shadow: inset 1px 2px rgba(255, 255, 255, .21);
+    -moz-box-shadow: inset 1px 2px rgba(255, 255, 255, .21);
+    box-shadow: inset 1px 2px rgba(255, 255, 255, .21);
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(37%, rgba(255, 255, 255, .07)), color-stop(56%, rgba(0, 0, 0, .07)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+    */
+}
+
+.paint-uilib-btn {
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-size: 14px;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: none;
+    border: 1px solid rgba(37, 114, 152, .78);
+    color: #fff;
+    background-color: #09f;
+    -webkit-box-shadow: inset 1px 2px rgba(255, 255, 255, .21);
+    -moz-box-shadow: inset 1px 2px rgba(255, 255, 255, .21);
+    box-shadow: inset 1px 2px rgba(255, 255, 255, .21);
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(37%, rgba(255, 255, 255, .07)), color-stop(56%, rgba(0, 0, 0, .07)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, .07) 37%, rgba(0, 0, 0, .07) 56%);
+}
+.paint-uilib-btn:hover {
+    -webkit-box-shadow:1px 1px 1px rgba(0,0,0,.39),inset 1px 2px rgba(255,255,255,.21);
+    -moz-box-shadow:1px 1px 1px rgba(0,0,0,.39),inset 1px 2px rgba(255,255,255,.21);box-shadow:1px 1px 1px rgba(0,0,0,.39),inset 1px 2px rgba(255,255,255,.21)
+}
+.paint-uilib-btn.btn-selected,.paint-uilib-btn:active {
+    outline:0;
+    background-image:-webkit-linear-gradient(top,rgba(0,0,0,.07) 37%,rgba(255,255,255,.07) 56%);
+    background-image:-moz-linear-gradient(top,rgba(0,0,0,.07) 37%,rgba(255,255,255,.07) 56%);
+    background-image:-o-linear-gradient(top,rgba(0,0,0,.07) 37%,rgba(255,255,255,.07) 56%);
+    background-image:linear-gradient(to bottom,rgba(0,0,0,.07) 37%,rgba(255,255,255,.07) 56%);
+    -webkit-box-shadow:inset 1px 2px rgba(0,0,0,.16);-moz-box-shadow:inset 1px 2px rgba(0,0,0,.16);
+    box-shadow:inset 1px 2px rgba(0,0,0,.16);
+}
+

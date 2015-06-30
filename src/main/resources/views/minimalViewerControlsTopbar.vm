@@ -1,0 +1,19 @@
+<nav id="minimalControls" class="navbar navbar-static-top hidden">
+    <div class="container">
+        <nav class="row-fluid">
+            <div class="center">
+                <ul class="pager">
+                    <li class="previous"><a id="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a></li>
+                    <li class="next"><a id="next" ><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>
+                    <li class="pagination">
+                        <span>
+                            <span id="page_num" type="text" class="" placeholder="1">1</span>
+                            /
+                            <span id="page_count">1</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</nav>

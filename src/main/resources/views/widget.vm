@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>PDF</title>
+    <link rel="stylesheet" href="../static/css/widget.css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+
+<!-- Minimal viewer - adding fixed position Navbar controls -->
+#include("views/minimalViewerControlsTopbar.vm")
+
+<!-- Bare viewer - using canvas -->
+<canvas id="the-canvas" class="the-canvas hidden"/>
+
+<!-- Full viewer - using iFrame and URL params -->
+##<iframe width="100%" height="100%" frameborder="0"
+##        scrolling="no" marginheight="0" marginwidth="0"
+##        src="../static/lib/pdfjs/web/viewer.html?file=http://media.wix.com/ugd/c0a3d7_d615effb43ee4156a089ec42da8e8d7e.pdf#zoom=page-width"></iframe>
+
+
+<!-- Imports -->
+<script type="text/javascript" src="//sslstatic.wix.com/services/js-sdk/1.42.0/js/Wix.js"></script>
+
+<!-- latest jQuery direct from google's CDN -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="../static/lib/pdfjs/build/pdf.js"></script>
+<script src="../static/js/widget.js"></script>
+
+<!-- for legacy browsers add compatibility.js -->
+<!--<script src="../compatibility.js"></script>-->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

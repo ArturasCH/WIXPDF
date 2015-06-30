@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Settings</title>
+    <link rel="stylesheet" href="../static/css/spinner.css"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/settings.css"/>
+    <!-- TODO move to async loading -->
+    <link rel="stylesheet" href="../static/lib/ui-lib/ui-lib.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../static/lib/nanoscroll/nanoscroller.css"/>
+    <link type="text/css" rel="stylesheet" href="../static/lib/font-awesome-4.1.0/css/font-awesome.min.css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body wix-ui>
+##    #include("views/spinner.vm")
+
+<!-- Settings header (LOGO, connected PDF and a connect PDF button) -->
+<div class="settingsHero container-fluid">
+    <header class="box">
+        <div class="appLogo logo">
+            <img width="86" src="../static/assets/pdf-logo.png" alt="logo"/>
+        </div>
+        <div class="container-fluid">
+            <br/>
+            <div class="row">
+                <div class="col-xs-8">
+                    <p>Embed a PDF file directly to your Wix site!</p>
+                </div>
+                <div class="col-xs-5">
+                    <p class="create-account"><strong>Connected PDF: </strong><a id="pdfLink" target="_blank">no pdf connected!</a></p>
+                </div>
+                <button class="pull-right submit uilib-btn btn-secondary connect" id="connectBtn">Select file</button>
+            ##                <div class="col-xs-4 col-xs-offset-4"><button class="submit uilib-btn btn-secondary connect" id="connectBtn">Select file</button></div>
+            </div>
+        </div>
+    </header>
+    <!-- Settings accordion (advanced configuration)-->
+    <div class="accordion" wix-ctrl="Accordion">
+        <div class="uilib-scrollDiv" style="position: relative; overflow: hidden; width: auto; height: 446px; padding: 0px 0px 2px;"><div wix-scroll="{height:446}" style="overflow: hidden; width: auto; height: 446px;">
+            <div class="acc-pane border">
+                <h3>General Settings: </h3>
+                <div class="acc-content" style="display: none;">
+                    <ul class="list">
+                        <li>
+                            <p class="popover-content">Document rotation: </p>
+                            <div wix-model="documentRotation" wix-ctrl="ButtonGroup">
+                                <button value="0"><i class="rotationIcon fa fa-file-picture-o fa-2x fa-rotate-0"></i></button>
+                                <button value="90"><i class="rotationIcon fa fa-file-picture-o fa-2x fa-rotate-90"></i></button>
+                                <button value="180"><i class="rotationIcon fa fa-file-picture-o fa-2x fa-rotate-180"></i></button>
+                                <button value="270"><i class="rotationIcon fa fa-file-picture-o fa-2x fa-rotate-270"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="popover-content">Start with page: </p>
+                            <div id="firstPageSelector" wix-model="startWithPage" wix-ctrl="Spinner" wix-options="{ minValue:1, maxValue:1, value: 1, size: 'medium' }"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="acc-pane border">
+                <h3>Viewer Layout Settings: </h3>
+                <div class="acc-content" style="display: none;">
+                    <p>How would you like your PDF to be displayed?</p>
+                    <div class="" wix-model="viewerLayout" wix-ctrl="Radio">
+                        <div class="container-fluid">
+                            <div class="row" data-model="layout-ctrl-row">
+                                <div class="col-xs-4 noPadding">
+                                    <div class="radio" data-radio-value="bare">
+                                        One page
+                                    </div>
+                                    <img width="86" src="../static/assets/pdf-logo.png" alt="pdf-viewer-bare-layout"/>
+                                </div>
+                                <div class="col-xs-4 noPadding">
+                                    <div class="radio" data-radio-value="minimal">
+                                        Mini viewer
+                                    </div>
+                                    <img width="86" src="../static/assets/pdf-logo.png" alt="pdf-viewer-minimal-layout"/>
+                                </div>
+                                <div class="col-xs-4 noPadding">
+                                    <div class="radio" data-radio-value="full">
+                                        Full viewer
+                                    </div>
+                                    <img width="86" src="../static/assets/pdf-logo.png" alt="pdf-viewer-full-layout"/>
+                                </div>
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="uilib-scrollBar" style="width: 8px; position: absolute; top: 0px; margin-top: 4px; opacity: 1; display: none; border-radius: 4px; z-index: 999999; transition: background-color 200ms; -webkit-transition: background-color 200ms; right: 4px; height: 446px; background: rgb(53, 174, 255);"></div><div class="uilib-scrollRail" style="width: 8px; position: absolute; height: 98%; top: 0px; display: none; border-radius: 4px; opacity: 0; z-index: 999998; right: 4px; background: rgb(51, 51, 51);"></div></div>
+    </div>
+
+
+</div>
+<!-- Wix SDK -->
+<script type="text/javascript" src="//sslstatic.wix.com/services/js-sdk/1.42.0/js/Wix.js"></script>
+<!--Wix minified <script type="text/javascript" src="//sslstatic.wix.com/services/js-sdk/1.40.0/js/wix.min.js"></script> -->
+<!-- jQuery dependency-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<!-- Wix UI -->
+<script type="text/javascript" src="../static/lib/ui-lib/ui-lib.min.js"></script>
+<!-- Settings View Logic -->
+<script src="../static/lib/pdfjs/build/pdf.js"></script>
+<script type="text/javascript" src="../static/js/settings.js"></script>
+##    <script type="text/javascript" src="../static/lib/nanoscroll/jquery.nanoscroller.min.js"></script>
+##    <script type="text/javascript" src="../static/lib/timeago/jquery.timeago.js"></script>
+</body>
+</html>

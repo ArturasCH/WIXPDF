@@ -1,0 +1,9 @@
+<div class="prev-btn">
+    <span class="previous glyphicon glyphicon-chevron-left"></span>
+</div>
+<div class="next-btn">
+    <span class="next glyphicon glyphicon-chevron-right"></span>
+</div>
+<div class="pagination-btn center">
+    <span>1 <span id="page_num" type="text" class="" placeholder="1"></span> / <span id="page_count">1000</span></span>
+</div>

@@ -1,0 +1,5 @@
+
+/.idea
+/target
+*.iml
+src/main/java/com/wixpress/app/domain/AppKeys.java
